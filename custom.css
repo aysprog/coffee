@@ -1,67 +1,202 @@
 
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(35px); }
-  to { opacity: 1; transform: translateY(0); }
+/* =========================
+   BREWORA - CUSTOM CSS
+   ========================= */
+
+/* Custom colors */
+:root {
+    --color-forest: #183B2B;
+    --color-sage: #687761;
+    --color-cream: #F5F0E6;
+    --color-coffee: #76543D;
+    --color-espresso: #211A15;
+    --color-gold: #C69A6B;
 }
 
-@keyframes fadeRight {
-  from { opacity: 0; transform: translateX(40px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes fadeLeft {
-  from { opacity: 0; transform: translateX(-40px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-@keyframes slowZoom {
-  from { transform: scale(1); }
-  to { transform: scale(1.06); }
-}
-
-.animate-fade-up {
-  animation: fadeUp 0.9s ease-out both;
-}
-
-.animate-fade-right {
-  animation: fadeRight 1s ease-out 0.2s both;
-}
-
-.animate-fade-left {
-  animation: fadeLeft 0.9s ease-out both;
-}
-
-.animate-float {
-  animation: float 4s ease-in-out infinite;
-}
-
-.animate-slow-zoom {
-  animation: slowZoom 8s ease-in-out infinite alternate;
-}
-
+/* Base styling */
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
+    margin: 0;
 }
 
 ::selection {
-  background: #687761;
-  color: white;
+    background: #687761;
+    color: white;
 }
 
-@theme {
-  --color-forest: #183B2B;
-  --color-sage: #687761;
-  --color-cream: #F5F0E6;
-  --color-coffee: #76543D;
-  --color-espresso: #211A15;
-  --color-gold: #C69A6B;
+/* Fade up animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade right animation */
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Fade left animation */
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Slow zoom animation */
+@keyframes slowZoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.06);
+    }
+}
+
+/* Animation utility classes */
+.animate-fade-up {
+    animation: fadeUp 0.9s ease-out both;
+}
+
+.animate-fade-right {
+    animation: fadeRight 1s ease-out 0.2s both;
+}
+
+.animate-fade-left {
+    animation: fadeLeft 0.9s ease-out both;
+}
+
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+.animate-slow-zoom {
+    animation: slowZoom 8s ease-in-out infinite alternate;
+}
+
+/* Custom color utility classes */
+.bg-forest {
+    background-color: var(--color-forest);
+}
+
+.bg-sage {
+    background-color: var(--color-sage);
+}
+
+.bg-cream {
+    background-color: var(--color-cream);
+}
+
+.bg-coffee {
+    background-color: var(--color-coffee);
+}
+
+.bg-espresso {
+    background-color: var(--color-espresso);
+}
+
+.bg-gold {
+    background-color: var(--color-gold);
+}
+
+.text-forest {
+    color: var(--color-forest);
+}
+
+.text-sage {
+    color: var(--color-sage);
+}
+
+.text-cream {
+    color: var(--color-cream);
+}
+
+.text-coffee {
+    color: var(--color-coffee);
+}
+
+.text-espresso {
+    color: var(--color-espresso);
+}
+
+.text-gold {
+    color: var(--color-gold);
+}
+
+.border-forest {
+    border-color: var(--color-forest);
+}
+
+.border-sage {
+    border-color: var(--color-sage);
+}
+
+.border-gold {
+    border-color: var(--color-gold);
+}
+
+/* Hover color utilities */
+.hover\:bg-forest:hover {
+    background-color: var(--color-forest);
+}
+
+.hover\:bg-sage:hover {
+    background-color: var(--color-sage);
+}
+
+.hover\:bg-gold:hover {
+    background-color: var(--color-gold);
+}
+
+.hover\:text-forest:hover {
+    color: var(--color-forest);
+}
+
+.hover\:text-gold:hover {
+    color: var(--color-gold);
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .animate-fade-up,
+    .animate-fade-right,
+    .animate-fade-left,
+    .animate-float,
+    .animate-slow-zoom {
+        animation: none;
+    }
 }
