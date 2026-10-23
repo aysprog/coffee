@@ -1,9 +1,4 @@
 
-/* =========================
-   BREWORA - CUSTOM CSS
-   ========================= */
-
-/* Custom colors */
 :root {
     --color-forest: #183B2B;
     --color-sage: #687761;
@@ -13,7 +8,6 @@
     --color-gold: #C69A6B;
 }
 
-/* Base styling */
 html {
     scroll-behavior: smooth;
 }
@@ -27,7 +21,6 @@ body {
     color: white;
 }
 
-/* Fade up animation */
 @keyframes fadeUp {
     from {
         opacity: 0;
@@ -39,7 +32,6 @@ body {
     }
 }
 
-/* Fade right animation */
 @keyframes fadeRight {
     from {
         opacity: 0;
@@ -51,7 +43,6 @@ body {
     }
 }
 
-/* Fade left animation */
 @keyframes fadeLeft {
     from {
         opacity: 0;
@@ -63,7 +54,6 @@ body {
     }
 }
 
-/* Floating animation */
 @keyframes float {
     0%, 100% {
         transform: translateY(0);
@@ -73,7 +63,6 @@ body {
     }
 }
 
-/* Slow zoom animation */
 @keyframes slowZoom {
     from {
         transform: scale(1);
@@ -83,7 +72,6 @@ body {
     }
 }
 
-/* Animation utility classes */
 .animate-fade-up {
     animation: fadeUp 0.9s ease-out both;
 }
@@ -104,7 +92,6 @@ body {
     animation: slowZoom 8s ease-in-out infinite alternate;
 }
 
-/* Custom color utility classes */
 .bg-forest {
     background-color: var(--color-forest);
 }
@@ -165,7 +152,6 @@ body {
     border-color: var(--color-gold);
 }
 
-/* Hover color utilities */
 .hover\:bg-forest:hover {
     background-color: var(--color-forest);
 }
@@ -186,7 +172,6 @@ body {
     color: var(--color-gold);
 }
 
-/* Reduced motion accessibility */
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -200,3 +185,33 @@ body {
         animation: none;
     }
 }
+
+
+
+/* Brewora custom color classes */
+
+.bg-forest { background-color: #183B2B !important; }
+.bg-sage { background-color: #687761 !important; }
+.bg-cream { background-color: #F5F0E6 !important; }
+.bg-coffee { background-color: #76543D !important; }
+.bg-espresso { background-color: #211A15 !important; }
+.bg-gold { background-color: #C69A6B !important; }
+
+.text-forest { color: #183B2B !important; }
+.text-sage { color: #687761 !important; }
+.text-cream { color: #F5F0E6 !important; }
+.text-coffee { color: #76543D !important; }
+.text-espresso { color: #211A15 !important; }
+.text-gold { color: #C69A6B !important; }
+
+.border-forest { border-color: #183B2B !important; }
+.border-sage { border-color: #687761 !important; }
+.border-gold { border-color: #C69A6B !important; }
+
+.hover\:bg-forest:hover { background-color: #183B2B !important; }
+.hover\:bg-sage:hover { background-color: #687761 !important; }
+.hover\:bg-gold:hover { background-color: #C69A6B !important; }
+
+.hover\:text-forest:hover { color: #183B2B !important; }
+.hover\:text-gold:hover { color: #C69A6B !important; }
+
