@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./tailwind/src/output.css">
+
+    <title>Shop Coffee | Brewora</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+</head>
+
+
+<body class="bg-cream font-[DM_Sans] text-espresso">
+
+
+    <div class="bg-forest px-4 py-2.5 text-center text-xs font-medium tracking-wide text-white sm:text-sm">
+
+        <span>Free shipping on orders over</span>
+
+        <span class="font-bold text-[#D7C09A]">
+            $50
+        </span>
+
+        <span class="mx-2 hidden sm:inline">
+            •
+        </span>
+
+        <span class="hidden sm:inline">
+            Freshly roasted. Carefully crafted.
+        </span>
+
+    </div>
+
+
+   <header class="sticky top-0 z-50 border-b border-black/5 bg-cream/95 backdrop-blur-md">
+
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-5 lg:px-8">
+
+        <a href="index.html" class="flex items-center gap-3">
+
+            <img src="./img/logo.png"
+                alt="Brewora logo"
+                class="h-12 w-12 object-contain sm:h-14 sm:w-14">
+
+            <div>
+
+                <span
+                    class="block font-[Playfair_Display] text-xl font-semibold leading-none tracking-tight text-forest sm:text-2xl">
+                    Brewora
+                </span>
+
+                <span
+                    class="mt-1 block text-[8px] font-bold uppercase tracking-[0.28em] text-sage sm:text-[9px]">
+                    Coffee Roasters
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <nav class="hidden items-center gap-8 lg:flex">
+
+            <a href="index.html"
+                class="relative font-medium text-espresso/65 transition-colors duration-300 hover:text-forest
+                after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-0
+                after:bg-forest after:transition-all after:duration-300
+                hover:after:w-full">
+                Home
+            </a>
+
+            <a href="shop.html"
+                class="relative font-medium text-forest
+                after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full
+                after:bg-forest">
+                Shop
+            </a>
+
+            <a href="index.html#story"
+                class="relative font-medium text-espresso/65 transition-colors duration-300 hover:text-forest
+                after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-0
+                after:bg-forest after:transition-all after:duration-300
+                hover:after:w-full">
+                Our Story
+            </a>
+
+            <a href="index.html#contact"
+                class="relative font-medium text-espresso/65 transition-colors duration-300 hover:text-forest
+                after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-0
+                after:bg-forest after:transition-all after:duration-300
+                hover:after:w-full">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="flex items-center gap-2 sm:gap-3">
+
+            <button type="button"
+                id="shopSearchButton"
+                aria-label="Search"
+                class="flex h-10 w-10 items-center justify-center rounded-full border border-espresso/10 bg-white text-base transition-all duration-300 hover:-translate-y-1 hover:border-forest hover:text-forest sm:h-12 sm:w-12 sm:text-lg">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </button>
+
+
+            <a href="#"
+                aria-label="Shopping cart"
+                class="relative flex h-10 w-10 items-center justify-center rounded-full border border-espresso/10 bg-white text-base transition-all duration-300 hover:-translate-y-1 hover:border-forest hover:text-forest sm:h-12 sm:w-12 sm:text-lg">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span
+                    class="cart-count absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-forest text-[10px] font-bold text-white">
+                    0
+                </span>
+
+            </a>
+
+
+            <a href="shop.html"
+                class="ml-2 hidden rounded-full bg-forest px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-[#102B20] hover:shadow-lg lg:block">
+
+                Shop Coffee
+
+            </a>
+
+
+            <button type="button"
+                id="mobileMenuButton"
+                aria-label="Menu"
+                class="flex h-10 w-10 items-center justify-center rounded-full border border-espresso/10 bg-white text-base sm:h-11 sm:w-11 sm:text-lg lg:hidden">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div id="mobileMenu"
+        class="hidden border-t border-black/5 bg-cream px-5 py-5 lg:hidden">
+
+        <nav class="flex flex-col gap-5">
+
+            <a href="index.html" class="font-medium text-espresso/70">
+                Home
+            </a>
+
+            <a href="shop.html" class="font-medium text-forest">
+                Shop
+            </a>
+
+            <a href="index.html#story" class="font-medium text-espresso/70">
+                Our Story
+            </a>
+
+            <a href="index.html#contact" class="font-medium text-espresso/70">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+    <main>
+
+
+        <section class="px-5 pb-14 pt-20 sm:pb-20 sm:pt-24">
+
+            <div class="mx-auto max-w-4xl text-center">
+
+                <p class="text-sm font-semibold uppercase tracking-[0.25em] text-sage">
+                    Brewora Coffee Collection
+                </p>
+
+                <h1
+                    class="mt-4 font-[Playfair_Display] text-5xl font-semibold leading-tight text-espresso sm:text-6xl lg:text-7xl">
+
+                    Find your perfect
+
+                    <span class="italic text-forest">
+                        cup.
+                    </span>
+
+                </h1>
+
+                <p class="mx-auto mt-6 max-w-2xl text-base leading-7 text-espresso/60 sm:text-lg">
+
+                    From bold espresso to smooth cold brew,
+                    discover carefully crafted coffees made
+                    for every kind of coffee moment.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="px-5 pb-24 lg:px-8">
+
+            <div class="mx-auto max-w-7xl">
+
+
+                <div class="mb-8 flex justify-center">
+
+                    <div id="searchBox" class="hidden w-full max-w-xl">
+
+                        <div class="relative">
+
+                            <i
+                                class="fa-solid fa-magnifying-glass absolute left-5 top-1/2 -translate-y-1/2 text-espresso/40">
+                            </i>
+
+                            <input id="coffeeSearch" type="search" placeholder="Search coffee..."
+                                class="w-full rounded-full border border-espresso/10 bg-white py-3.5 pl-12 pr-5 text-sm outline-none transition-all focus:border-sage focus:ring-2 focus:ring-sage/20">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="mb-12 flex flex-wrap items-center justify-center gap-3">
+
+                    <button type="button" data-filter="all"
+                        class="filter-button rounded-full bg-forest px-6 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#102B20]">
+
+                        All Coffee
+
+                    </button>
+
+
+                    <button type="button" data-filter="hot"
+                        class="filter-button rounded-full border border-espresso/10 bg-white px-6 py-2.5 text-sm font-medium text-espresso/70 transition-all duration-300 hover:-translate-y-1 hover:border-forest hover:text-forest">
+
+                        Hot Coffee
+
+                    </button>
+
+
+                    <button type="button" data-filter="cold"
+                        class="filter-button rounded-full border border-espresso/10 bg-white px-6 py-2.5 text-sm font-medium text-espresso/70 transition-all duration-300 hover:-translate-y-1 hover:border-forest hover:text-forest">
+
+                        Cold Coffee
+
+                    </button>
+
+                </div>
+
+
+                <div id="coffeeGrid" class="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
+
+                    <div class="coffee-card group" data-category="hot" data-name="Classic Americano">
+
+                        <div class="relative overflow-hidden rounded-2xl bg-[#E8E1D5]">
+
+                            <img src="./img/americano.jpg" alt="Classic Americano"
+                                class="aspect-square w-full object-cover transition duration-700 group-hover:scale-105">
+
+                            <span
+                                class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-forest backdrop-blur">
+                                Classic
+                            </span>
+
+                        </div>
+
+
+                        <div class="pt-5">
+
+                            <div class="flex items-start justify-between gap-4">
+
+                                <div>
+
+                                    <h2 class="font-[Playfair_Display] text-xl font-semibold text-espresso">
+                                        Classic Americano
+                                    </h2>
+
+                                    <p class="mt-1 text-sm text-espresso/55">
+                                        Bold, smooth & balanced
+                                    </p>
+
+                                </div>
+
+                                <p class="font-semibold text-forest">
+                                    $4.50
+                                </p>
+
+                            </div>
+
+
+                            <button type="button" data-add-cart="Classic Americano"
+                                class="mt-5 flex w-full items-center justify-center gap-2 rounded-full border border-forest bg-transparent py-3 text-sm font-semibold text-forest transition-all duration-300 hover:bg-forest hover:text-white">
+
+                                View Coffee
+
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="coffee-card group" data-category="hot" data-name="Classic Cappuccino">
+
+                        <div class="relative overflow-hidden rounded-2xl bg-[#E8E1D5]">
+
+                            <img src="./img/cappuccino.jpg" alt="Classic Cappuccino"
+                                class="aspect-square w-full object-cover transition duration-700 group-hover:scale-105">
+
+                            <span
+                                class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-forest backdrop-blur">
+                                Bestseller
+                            </span>
+
+                        </div>
+
+
+                        <div class="pt-5">
+
+                            <div class="flex items-start justify-between gap-4">
+
+                                <div>
+
+                                    <h2 class="font-[Playfair_Display] text-xl font-semibold text-espresso">
+                                        Classic Cappuccino
+                                    </h2>
+
+                                    <p class="mt-1 text-sm text-espresso/55">
+                                        Rich espresso & silky foam
+                                    </p>
+
+                                </div>
+
+                                <p class="font-semibold text-forest">
+                                    $5.00
+                                </p>
+
+                            </div>
+
+
+                            <button type="button" data-add-cart="Classic Cappuccino"
+                                class="mt-5 flex w-full items-center justify-center gap-2 rounded-full border border-forest py-3 text-sm font-semibold text-forest transition-all duration-300 hover:bg-forest hover:text-white">
+
+                                View Coffee
+
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="coffee-card group" data-category="hot" data-name="Caramel Macchiato">
+
+                        <div class="relative overflow-hidden rounded-2xl bg-[#E8E1D5]">
+
+                            <img src="./img/caramel-macchiato.jpg" alt="Caramel Macchiato"
+                                class="aspect-square w-full object-cover transition duration-700 group-hover:scale-105">
+
+                            <span
+                                class="absolute left-4 top-4 rounded-full bg-[#D7C09A] px-3 py-1 text-xs font-semibold text-forest">
+                                Sweet
+                            </span>
+
+                        </div>
+
+
+                        <div class="pt-5">
+
+                            <div class="flex items-start justify-between gap-4">
+
+                                <div>
+
+                                    <h2 class="font-[Playfair_Display] text-xl font-semibold text-espresso">
+                                        Caramel Macchiato
+                                    </h2>
+
+                                    <p class="mt-1 text-sm text-espresso/55">
+                                        Creamy, sweet & caramel-rich
+                                    </p>
+
+                                </div>
+
+                                <p class="font-semibold text-forest">
+                                    $5.50
+                                </p>
+
+                            </div>
+
+
+                            <button type="button" data-add-cart="Caramel Macchiato"
+                                class="mt-5 flex w-full items-center justify-center gap-2 rounded-full border border-forest py-3 text-sm font-semibold text-forest transition-all duration-300 hover:bg-forest hover:text-white">
+
+                                View Coffee
+
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="coffee-card group" data-category="hot" data-name="Chocolate Mocha">
+
+                        <div class="relative overflow-hidden rounded-2xl bg-[#E8E1D5]">
+
+                            <img src="./img/chocolatte.jpg" alt="Chocolate Mocha"
+                                class="aspect-square w-full object-cover transition duration-700 group-hover:scale-105">
+
+                            <span
+                                class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-forest backdrop-blur">
+                                Chocolate
+                            </span>
+
+                        </div>
+
+
+                        <div class="pt-5">
+
+                            <div class="flex items-start justify-between gap-4">
+
+                                <div>
+
+                                    <h2 class="font-[Playfair_Display] text-xl font-semibold text-espresso">
+                                        Chocolate Mocha
+                                    </h2>
+
+                                    <p class="mt-1 text-sm text-espresso/55">
+                                        Deep chocolate & espresso
+                                    </p>
+
+                                </div>
+
+                                <p class="font-semibold text-forest">
+                                    $5.75
+                                </p>
+
+                            </div>
+
+
+                            <button type="button" data-add-cart="Chocolate Mocha"
+                                class="mt-5 flex w-full items-center justify-center gap-2 rounded-full border border-forest py-3 text-sm font-semibold text-forest transition-all duration-300 hover:bg-forest hover:text-white">
+
+                                View Coffee
+
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="coffee-card group" data-category="cold" data-name="Cold Brew">
+
+                        <div class="relative overflow-hidden rounded-2xl bg-[#E8E1D5]">
+
+                            <img src="./img/cold-brew.jpg" alt="Cold Brew"
+                                class="aspect-square w-full object-cover transition duration-700 group-hover:scale-105">
+
+                            <span
+                                class="absolute left-4 top-4 rounded-full bg-forest px-3 py-1 text-xs font-semibold text-white">
+                                Cold
+                            </span>
+
+                        </div>
+
+
+                        <div class="pt-5">
+
+                            <div class="flex items-start justify-between gap-4">
+
+                                <div>
+
+                                    <h2 class="font-[Playfair_Display] text-xl font-semibold text-espresso">
+                                        Cold Brew
+                                    </h2>
+
+                                    <p class="mt-1 text-sm text-espresso/55">
+                                        Smooth, chilled & refreshing
+                                    </p>
+
+                                </div>
+
+                                <p class="font-semibold text-forest">
+                                    $5.25
+                                </p>
+
+                            </div>
+
+
+                            <button type="button" data-add-cart="Cold Brew"
+                                class="mt-5 flex w-full items-center justify-center gap-2 rounded-full border border-forest py-3 text-sm font-semibold text-forest transition-all duration-300 hover:bg-forest hover:text-white">
+
+                                View Coffee
+
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="coffee-card group" data-category="hot" data-name="Espresso">
+
+                        <div class="relative overflow-hidden rounded-2xl bg-[#E8E1D5]">
+
+                            <img src="./img/espresso.jpg" alt="Espresso"
+                                class="aspect-square w-full object-cover transition duration-700 group-hover:scale-105">
+
+                            <span
+                                class="absolute left-4 top-4 rounded-full bg-forest px-3 py-1 text-xs font-semibold text-white">
+                                Strong
+                            </span>
+
+                        </div>
+
+
+                        <div class="pt-5">
+
+                            <div class="flex items-start justify-between gap-4">
+
+                                <div>
+
+                                    <h2 class="font-[Playfair_Display] text-xl font-semibold text-espresso">
+                                        Espresso
+                                    </h2>
+
+                                    <p class="mt-1 text-sm text-espresso/55">
+                                        Intense, rich & aromatic
+                                    </p>
+
+                                </div>
+
+                                <p class="font-semibold text-forest">
+                                    $3.75
+                                </p>
+
+                            </div>
+
+
+                            <button type="button" data-add-cart="Espresso"
+                                class="mt-5 flex w-full items-center justify-center gap-2 rounded-full border border-forest py-3 text-sm font-semibold text-forest transition-all duration-300 hover:bg-forest hover:text-white">
+
+                                View Coffee
+
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="coffee-card group" data-category="hot" data-name="Classic Latte">
+
+                        <div class="relative overflow-hidden rounded-2xl bg-[#E8E1D5]">
+
+                            <img src="./img/latte.jpg" alt="Classic Latte"
+                                class="aspect-square w-full object-cover transition duration-700 group-hover:scale-105">
+
+                            <span
+                                class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-forest backdrop-blur">
+                                Smooth
+                            </span>
+
+                        </div>
+
+
+                        <div class="pt-5">
+
+                            <div class="flex items-start justify-between gap-4">
+
+                                <div>
+
+                                    <h2 class="font-[Playfair_Display] text-xl font-semibold text-espresso">
+                                        Classic Latte
+                                    </h2>
+
+                                    <p class="mt-1 text-sm text-espresso/55">
+                                        Creamy, mellow & silky
+                                    </p>
+
+                                </div>
+
+                                <p class="font-semibold text-forest">
+                                    $5.00
+                                </p>
+
+                            </div>
+
+
+                            <button type="button" data-add-cart="Classic Latte"
+                                class="mt-5 flex w-full items-center justify-center gap-2 rounded-full border border-forest py-3 text-sm font-semibold text-forest transition-all duration-300 hover:bg-forest hover:text-white">
+
+                                View Coffee
+
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="coffee-card group" data-category="hot" data-name="Mocha">
+
+                        <div class="relative overflow-hidden rounded-2xl bg-[#E8E1D5]">
+
+                            <img src="./img/mocha.jpg" alt="Mocha"
+                                class="aspect-square w-full object-cover transition duration-700 group-hover:scale-105">
+
+                            <span
+                                class="absolute left-4 top-4 rounded-full bg-[#D7C09A] px-3 py-1 text-xs font-semibold text-forest">
+                                House Favorite
+                            </span>
+
+                        </div>
+
+
+                        <div class="pt-5">
+
+                            <div class="flex items-start justify-between gap-4">
+
+                                <div>
+
+                                    <h2 class="font-[Playfair_Display] text-xl font-semibold text-espresso">
+                                        Mocha
+                                    </h2>
+
+                                    <p class="mt-1 text-sm text-espresso/55">
+                                        Velvety chocolate & coffee
+                                    </p>
+
+                                </div>
+
+                                <p class="font-semibold text-forest">
+                                    $5.50
+                                </p>
+
+                            </div>
+
+
+                            <button type="button" data-add-cart="Mocha"
+                                class="mt-5 flex w-full items-center justify-center gap-2 rounded-full border border-forest py-3 text-sm font-semibold text-forest transition-all duration-300 hover:bg-forest hover:text-white">
+
+                                View Coffee
+
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <p id="noResults" class="mt-12 hidden text-center text-sm text-espresso/50">
+                    No coffee found.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="bg-forest px-5 py-20 text-white lg:px-8">
+
+            <div class="mx-auto max-w-5xl text-center">
+
+                <p class="text-sm font-semibold uppercase tracking-[0.25em] text-[#C6D0C0]">
+                    Your next favorite cup
+                </p>
+
+                <h2 class="mt-4 font-[Playfair_Display] text-4xl font-semibold sm:text-5xl">
+
+                    Good coffee starts with
+
+                    <span class="italic text-[#D7C09A]">
+                        good beans.
+                    </span>
+
+                </h2>
+
+                <p class="mx-auto mt-5 max-w-2xl leading-7 text-white/65">
+
+                    Carefully selected beans, thoughtfully roasted
+                    and ready to become part of your daily ritual.
+
+                </p>
+
+                <a href="#coffeeGrid"
+                    class="mt-8 inline-flex items-center gap-3 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-forest transition-all duration-300 hover:-translate-y-1 hover:bg-cream">
+
+                    Explore All Coffee
+
+                    <i class="fa-solid fa-arrow-up text-xs"></i>
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="bg-[#102B20] px-5 py-8 text-center text-sm text-white/60">
+
+        <p>
+            © 2026 Brewora Coffee Roasters.
+            Crafted with love & coffee.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
